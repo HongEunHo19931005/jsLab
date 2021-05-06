@@ -11,6 +11,21 @@
 		<tr>
 
 			<script language="javascript">
+			//작성 위치
+			for(var dan=2; dan<=9; dan++){
+				document.write("<th>"+dan+"단</th>");
+			}
+			document.write("<tr>");
+			for(var dan=2; dan<=9; dan++){
+				  document.write("<td>");
+			
+				for(var k=1; k<=9; k++){ //1~9까지 곱합니다.
+				    document.write(dan+"x"+k+"="+dan*k+"</br>");
+				}
+				    document.write("</td>");
+				}
+			
+			
 				
 			</script>
 
