@@ -29,15 +29,47 @@
 				alert("아이디를 꼭 입력하세요!");
 				$("#id").focus();
 				return false;
+			}   $("#password").focusout(function () {
+		        var pwd1 = $("password").val();
+		        var pwd2 = $("password)").val();
+		  
+		        if (isNaN( pwd1 != '' && pwd2 == '') ) {
+		            null;
+		        } else if (isNaN(pwd1 != "" || pwd2 != "")) {
+		            if (pwd1 == pwd2) {
+		                // 비밀번호 일치 이벤트 실행
+		            } else {
+		                // 비밀번호 불일치 이벤트 실행
+		            }
+		        }
+		    });
+		var [tel1,tel2,tel3] = telnum;
+		var telnum =  /^\d{2,3}-\d{3,4}-\d{4}$/;
+		
+		console.log($("#job option value:eq(1)").is(":학생"));
+		console.log($("#job option value:eq(2)").is(":직장인"));
+		console.log($("#job option value:eq(3)").is(":자영업"));
+		console.log($("#job option value:eq(4)").is(":주부"));
+		console.log($("#job gender:eq(0)").is(":M"));
+		console.log($("#job gender:eq(1)").is(":W"));
+			
+		if(theFrom.id.value==""||theFrom.pwd.value==""||theFrom.pwd2.value==""||theFrom.name.value==""
+				||theFrom.telnum.value==""||theFrom.addr.value==""||theFrom.job.value==""
+				||theFrom.gender.value==""){
+			alert("필수 입력란이 비었습니다 .");
+		}else{
+			alert("ok")
 			}
+		
 			
-			
+		
+		
 			
 			
 			
 			
 
-		}); // submit() end
+	
 
 	}); // ready() end
 </script>
