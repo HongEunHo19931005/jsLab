@@ -36,47 +36,50 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="../../index2.html"><b>으노쨔응</b>빠르다앙</a>
+			<a href="../../index2.html"><b>Admin</b>LTE</a>
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">
-			<p class="login-box-msg">세션을 시작하려면 로그인하세요.</p>
+			<p class="login-box-msg">Sign in to start your session</p>
 
-			<form action="../../index2.html" method="post">
+			<form action="../../index.html" method="post">
 				<div class="form-group has-feedback">
-					<input type="email" class="form-control" id="email" placeholder="Email">
-					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					<input type="email" class="form-control" id="email"
+						placeholder="Email"> <span
+						class="glyphicon glyphicon-envelope form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" class="form-control"id="password" placeholder="Password">
-					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+					<input type="password" class="form-control" id="password"
+						placeholder="Password"> <span
+						class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
 				<div class="row">
 					<div class="col-xs-8">
 						<div class="checkbox icheck">
-							<label> <input type="checkbox"> 자동 로그인
+							<label> <input type="checkbox"> Remember Me
 							</label>
 						</div>
 					</div>
 					<!-- /.col -->
 					<div class="col-xs-4">
-						<button type="submit" class="btn btn-primary btn-block btn-flat" id="btn1">로그인</button>
+						<button type="submit" class="btn btn-primary btn-block btn-flat" id="btn1">Sign
+							In</button>
 					</div>
 					<!-- /.col -->
 				</div>
 			</form>
 
 			<div class="social-auth-links text-center">
-				<p>- 아니면 이걸로 하든가 -</p>
+				<p>- OR -</p>
 				<a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i
-					class="fa fa-facebook"></i> 페이뜨뿍</a> <a href="#"
+					class="fa fa-facebook"></i> Sign in using Facebook</a> <a href="#"
 					class="btn btn-block btn-social btn-google btn-flat"><i
-					class="fa fa-google-plus"></i> 구글 플러스+</a>
+					class="fa fa-google-plus"></i> Sign in using Google+</a>
 			</div>
 			<!-- /.social-auth-links -->
 
-			<a href="#">병신 비번을까먹음?</a><br> <a href="register.html"
-				class="text-center">새롭게 시작하자</a>
+			<a href="#">I forgot my password</a><br> <a href="register.html"
+				class="text-center">Register a new membership</a>
 
 		</div>
 		<!-- /.login-box-body -->
@@ -97,44 +100,37 @@
 				increaseArea : '20%' // optional
 			});
 		});
-		</script>
-		
-		<script type="text/javascript">
-			//<![CDATA[
+	</script>
 
-			function login(id, pw) {
-				if (id == "hanguk@naver.com") { //방문자가 입력한 id가 "hanguk"과 일치할 경우
 
-					if (pw == "1234") { 
-						location.href='../../index2.html';
-						alert(id+"님 방문 환영합니당.");//방문자가 입력한 pw가 "1234"와 일치할 경우
-						//document.write(id + "님 방문을 환영합니다");
-					} else { //비밀번호가 일치하지 않을 경우
-						alert("잘못된 비밀번호입니다.")
-					}
 
-				} else { //방문자가 입력한 id가 일치하지 않을 경우
-
-					alert("존재하지 않는 아이디입니다.")
-
+	<script type="text/javascript">
+		//<![CDATA[
+		function login(id, pw) {
+			if (id == "hanguk@naver.com") {
+				if (pw == "1234") {
+					alert(id+"님 방문을 환영합니다.");
+					return true;
+				} else {
+					alert("잘못된 비밀번호입니다.");
 				}
-				return false;
+			} else {
+				alert("존재하지 않는 아이디입니다.");
 			}
-			/*질의응답 창을 이용해 방문자에게  아이디와 
-			 비밀번호를 입력받습니다.*/
-			 document.getElementById("btn1").onclick=function(){
+			return false;
+		}
+
+		document.getElementById("btn1").onclick = function() {
 			var user_id = document.getElementById("email").value;
 			var user_pw = document.getElementById("password").value;
-			var result=login(user_id,user_pw);
-			if(!result){
+			var result = login(user_id, user_pw);
+			if(!result) {
 				return false;
-				}
 			}
-	
-			//방문자가 입력한 비밀번호와 아이디를 함수의 매개 변수에 전달합니다.
-			//login(user_id, user_pw);
-			//document.getElementById("email").value;
-			//]]>
+		}
+
+		//]]>
 	</script>
+
 </body>
 </html>
