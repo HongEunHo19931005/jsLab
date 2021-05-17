@@ -96,7 +96,7 @@ $(function(){
   var btnNum=0;
   function autoPlay(){//1~4버튼이 순서대로 강제 클릭 이벤트가 발생되는 함수
     btnNum++;
-    if(btnNum>=4) btnNum=0;
+    if(btnNum>=3) btnNum=0;
     
     //1~4버튼이 btnNum 값에 따라 순서대로 선택되고 강제로 클릭됩니다.
     $("#roll_banner_wrap dt a").eq(btnNum).trigger("click");
@@ -171,4 +171,5 @@ $(function(){
       $("#pop_wrap").fadeOut("fast");
       return false;
   });
+  
 });
